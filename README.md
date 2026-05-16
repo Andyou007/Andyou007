@@ -2,6 +2,11 @@
 
 A web system architect, specializing in requirements definition, bit layout, vm orchestration, etc.
 
+## Works
+
+- organization owner: [animagram](https://github.com/animagram-jp)
+- OSS maintaining: 5 Repositories in Github, 2 crates in crates.io
+
 ## Stacks
 
 ### Business
@@ -20,11 +25,6 @@ A web system architect, specializing in requirements definition, bit layout, vm 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
 ![WebAssembly](https://img.shields.io/badge/WebAssembly-654FF0?style=flat&logo=webassembly&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white)
-
-## Works
-
-- organization owner: [animagram](https://github.com/animagram-jp)
-- OSS maintaining: 5 Repositories in Github, 2 crates in crates.io
 
 ## License
 
