@@ -4,7 +4,7 @@ A web system architect, specializing in requirements definition, bit layout, vm 
 
 ## Projects
 
-- organization owner: [animagram](https://github.com/animagram-jp)
+- organization owner: [![animagram](https://img.shields.io/badge/animagram-181717?style=flat&logo=github&logoColor=white)](https://github.com/animagram-jp)
 - OSS maintainer: 5 Repositories in Github, 2 crates in crates.io
 
 ## Stacks
