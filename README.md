@@ -2,7 +2,7 @@
 
 A web system architect, specializing in requirements definition, bit layout, vm orchestration, etc.
 
-## Works
+## Projects
 
 - organization owner: [animagram](https://github.com/animagram-jp)
 - OSS maintaining: 5 Repositories in Github, 2 crates in crates.io
