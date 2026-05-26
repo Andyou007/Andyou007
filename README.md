@@ -1,5 +1,7 @@
 # Andyou
 
+[![TRPG Profile](https://img.shields.io/badge/Link:>-TRPG-purple?labelColor=white)](./TRPGProfile)
+
 A web system architect, specializing in requirements definition, bit layout, vm orchestration, etc.
 
 ## Acounts
