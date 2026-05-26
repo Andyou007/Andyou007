@@ -2,6 +2,8 @@
 
 # アンジュ
 
+[![X](https://img.shields.io/badge/@Andyou__007-000000?style=flat&logo=x&logoColor=white)](https://x.com/Andyou_007)
+
 TRPGプレイヤー「アンジュ」のプロフィール
 
 ## プレイスタイル
