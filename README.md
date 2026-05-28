@@ -47,3 +47,7 @@ A web system architect, specializing in requirements definition, bit layout, vm 
 ## License
 
 [![License: CC BY-ND 4.0](https://img.shields.io/badge/License-CC%20BY--ND%204.0-ff69b4)](https://creativecommons.org/licenses/by-nd/4.0/)
+
+## Wish list
+
+- [Amazon wish list](https://www.amazon.jp/hz/wishlist/ls/3D465LE764AVF?ref_=wl_share)
