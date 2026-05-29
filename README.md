@@ -1,6 +1,6 @@
 # Andyou
 
-[![TRPG Profile](https://img.shields.io/badge/Link>-TRPG_Profile-purple?labelColor=white)](./TrpgProfile.md)
+[![TRPG Profile](https://img.shields.io/badge/Link-TRPG_Profile-purple?labelColor=white)](./TrpgProfile.md)
 
 A web system architect, specializing in requirements definition, bit layout, vm orchestration, etc.
 - name: Andyou
