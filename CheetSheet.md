@@ -148,7 +148,6 @@ use core::{
         bool,
         char, str,
     },
-    alloc::{GlobalAlloc, Layout},
     fm,
     result,
     panic::Panicinfo,
@@ -159,23 +158,14 @@ use alloc::{
     boxed::Box,
     sync::Arc,
 };
-use libc::malloc;
+use std::alloc::System;
 use log::{Log, Record};
 
 #[cfg(feature = "nightly")]
 use core::intrinsics::abort;
 
-struct Allocator;
-
-unsafe impl GlobalAlloc for Allocator {
-    unsafe fn alloc(&self, layout: Layout) -> *mut u8 {
-        malloc(layout.size()) as *mut u8
-    }
-    unsafe fn dealloc(&self, ptr: *mut u8, layout: Layout);
-}
-
 #[global_allocator]
-static ALLOCATOR: Allocator = Allocator;
+static GLOBAL: System = System;
 
 macro_rules! debug_log {
     ($($arg:tt)*) => {{
