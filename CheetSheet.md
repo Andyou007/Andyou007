@@ -154,6 +154,7 @@ use core::{
     ptr::null_nut,
 };
 use alloc::{
+    string::String,
     vec::Vec,
     boxed::Box,
     sync::Arc,
