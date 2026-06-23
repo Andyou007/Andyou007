@@ -160,7 +160,7 @@ use alloc::{
     sync::Arc,
 };
 use std::alloc::System;
-use log::{Log, Record};
+use log::debug;
 
 #[cfg(feature = "nightly")]
 use core::intrinsics::abort;
