@@ -60,6 +60,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # claude code
 curl -fsSL https://claude.ai/install.sh | bash
+
+# build-essential
+sudo apt install build-essential
 ```
 
 #### Docker
