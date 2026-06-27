@@ -114,6 +114,13 @@ rm syukujitsu.csv
 
 ### Rust
 
+```bash
+# rustup: https://rust-lang.org/tools/install/
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # WSL
+# wasm-pack: https://wasm-bindgen.github.io/wasm-pack/installer/
+curl https://wasm-bindgen.github.io/wasm-pack/installer/init.sh -sSf | sh
+```
+
 ```toml
 # Cargo.toml
 [package]
