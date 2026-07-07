@@ -2,11 +2,9 @@
 
 # Cheetsheet
 
-- update_at: 2026-05
+- update_at: 2026-07
 
-## setup
-
-### Powershell
+## Powershell
 
 ```powershell
 # Excute Windows Powershell as Administrator
@@ -23,11 +21,10 @@ gsudo wsl --install --distribution Debian # select a distribution
 gsudo wsl -d Debian
 ```
 
-### Linux
+## Debian
 
 ```bash
-# user と sudo password を作成
-
+# --- apt ---
 sudo apt update && sudo apt upgrade -y
 mkdir -p w # make a working root (recommendation)
 
@@ -36,68 +33,42 @@ sudo apt purge cloud-init
 sudo apt autoremove
 sudo rm -rf /etc/cloud /var/lib/cloud
 which nano && sudo apt purge vim-tiny vim
-```
 
-#### Utility
-
-```bash
-# ssh
-ssh-keygen -t ed25519 # type "Enter" to continue
-cat ~/.ssh/id_ed25519.pub # copy and paste to 3rd party inputs
-chmod 600 ~/.ssh/id_ed25519
-
-# tmux セッション永続化
-sudo apt install tmux -y
-tmux # detouch using Ctrl + b -> d & return using `tmux a`
-
-# git
-sudo apt update && sudo apt install git
-git config --global user.name ""
-git config --global user.email ""
-
-# uv (Python library manager)
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# claude code
-curl -fsSL https://claude.ai/install.sh | bash
-
-# build-essential
-sudo apt install build-essential
-```
-
-#### Docker
-
-- clean up: `sudo rm -rf /var/lib/docker/ /var/lib/containerd`
-- [install](https://docs.docker.com/engine/install/debian)
-- set up: `sudo usermod -aG docker $USER && newgrp docker && docker login -u "" -p ""`
-
-note: containerd.io docker-ce docker-ce-cli docker-buildx-plugin for minimum install
-
-## Utility
-
-### apt
-
-```bash
+# get version informations
 uname -a # linux kernel version
 cat /etc/os-release # distribution version
 sudo apt list --manual-installed
 sudo apt autoremove
+cat /etc/apt/sources.list
+sudo rm -f /etc/apt/sources.list.d/{repogitory}.list
 
-# apt
-cat /etc/apt/sources.list # 追加済みリポジトリリスト
-sudo rm -f /etc/apt/sources.list.d/{repogitory}.list # リポジトリ登録削除
-```
+# --- ssh ---
+ssh-keygen -t ed25519 # type "Enter" to continue
+cat ~/.ssh/id_ed25519.pub # copy and paste to 3rd party inputs
+chmod 600 ~/.ssh/id_ed25519
 
-### Git
+# --- tmux ---
+sudo apt install tmux -y
+tmux # detouch using Ctrl + b -> d & return using `tmux a`
 
-```bash
+# --- git ---
+sudo apt update && sudo apt install git
+git config --global user.name ""
+git config --global user.email ""
+
 # checkout aborting diffs
 sudo chown 1000:1000 -R . && git clean -fd
-```
 
-### Docker
+# --- uv (Python library manager) ---
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-```bash
+# --- claude code ---
+curl -fsSL https://claude.ai/install.sh | bash
+
+# --- build-essential ---
+sudo apt install build-essential
+
+# --- Docker ---
 # requires at least 1 argument error when no container running
 docker stop $(docker ps -q) && docker rm $(docker ps -aq)
 
@@ -106,13 +77,21 @@ docker system prune          # delete unused
 sudo rm -rf /var/lib/docker/ # delete all
 ```
 
+## Docker
+
+- clean up: `sudo rm -rf /var/lib/docker/ /var/lib/containerd`
+- [install](https://docs.docker.com/engine/install/debian)
+- set up: `sudo usermod -aG docker $USER && newgrp docker && docker login -u "" -p ""`
+
+note: containerd.io docker-ce docker-ce-cli docker-buildx-plugin for minimum install
+
 ```powershell
 # optimize vhdx
 Optimize-VDisk -Path "Local\Docker\wsl\ext4.vhdx" -Mode Full
 gsudo pwsh -NoProfile -Command "Optimize-VHD -Path 'C:AppData\Local\wsl\{token}\ext4.vhdx' -Mode Full"
 ```
 
-### national holidays (JP)
+## national holidays (JP)
 
 ```bash
 # "昭和30年（1955年）から令和9年（2027年）国民の祝日（csv形式：22KB）"
@@ -121,81 +100,66 @@ iconv -f SHIFT-JIS -t UTF-8 syukujitsu.csv | awk -F, '$1 ~ /^2026/ {print $1 "\t
 rm syukujitsu.csv
 ```
 
-### Rust
+## Rust
 
-```bash
-# rustup: https://rust-lang.org/tools/install/
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # WSL
-# wasm-pack: https://wasm-bindgen.github.io/wasm-pack/installer/
-curl https://wasm-bindgen.github.io/wasm-pack/installer/init.sh -sSf | sh
-```
+- [rustup: managemer](https://rust-lang.org/tools/install/)
+- [cargo docs: toml specs](https://doc.rust-lang.org/cargo/reference/manifest.html)
+- [wasm-pack: wasm builder](https://wasm-bindgen.github.io/wasm-pack/installer/)
 
-```toml
-# Cargo.toml
-[package]
-name = ""
-version = "0.1.0"
-edition = "2024"
-authors = [""]
-description = ""
-license = "Apache-2.0"
+## Github Actions
 
-[lib]
-crate-type = ["rlib", "cdylib"] # C dynamic library
+- [github docs: workflow syntax](https://docs.github.com/ja/actions/reference/workflows-and-actions/workflow-syntax)
+- [github repos: runners' spec](https://github.com/actions/runner-images)
+- [Github: @actions/upload-artifact](https://github.com/marketplace/actions/upload-a-build-artifact)
 
-[dependencies]
-libc = { version = "0.2", default-features = false }
+```yaml
+name: "workflow name"
 
-[features]
-default    = []
-```
+on: # 実行条件
+    workflow_dispatch: # GUI手動実行
+    release:
+        types: [published] # リリース時実行
+    push:
+        tags:
+            - "*.*.*" # タグ作成時実行 (リリース時実行と重複するのでどちらか選択)
+        branches:
+            - "main"
 
-```rust
-// #![no_std]
-extern crate core;
-extern crate libc;
-extern crate alloc;
-extern crate std;
-use core::{
-    primitive::{
-        u8, u16, u32, u64, u128, usize,
-        i8, i16, i32, i64, i128, isize,
-        f32, f64,
-        bool,
-        char, str,
-    },
-    fm,
-    result,
-    panic::Panicinfo,
-    ptr::null_nut,
-};
-use alloc::{
-    string::String,
-    vec::Vec,
-    boxed::Box,
-    sync::Arc,
-};
-use std::alloc::System;
-use log::debug;
+permissions: # 実行時の付与権限
+    contents: "read"
+    actions: "write" # github artifactの保存など
 
-#[cfg(feature = "nightly")]
-use core::intrinsics::abort;
+env: # 環境変数 (run: 内で$付きキー名で扱う定数)
+    ENV_VAR:   ${{vars.ENV_VAR}} # Repository/Organization/Environment単位で設定可能
+    SECRET_KEY: ${{secrets.SECRET_KEY}} # 機密情報用マスクフィールド
 
-#[global_allocator]
-static GLOBAL: System = System;
+jobs:
+    deploy: # 任意のjob名
+        timeout-minutes: 30 # stepsごとにも設定可能
+        runs-on: "ubuntu-latest" # 選ばれるCPUアーキテクチャはdocsで都度要確認
+        # needs, if, stratergy: jobs全体で実行制御可能。
+        steps:
+            - name: "git clone" # 省略可
+              id: "git_clone" # 省略可。外部stepで出力を取得したい場合に使う
+              # GITHUB_REF_NAME: 自動で設定される、onに応じたブランチ/タグ名
+              # GITHUB_REPOSITORY: こちらも自動で設定される
+              run: |
+                git clone --depth 1 --branch "${GITHUB_REF_NAME}" \
+                "https://github.com/${GITHUB_REPOSITORY}.git" .
 
-macro_rules! debug_log {
-    ($($arg:tt)*) => {{
-        #[cfg(feature = "logging")]
-        { log::debug!($($arg)*); }
-    }};
-}
-
-#[panic_handler]
-fn panic(info: &PanicInfo) -> ! {
-    debug_log!("panic: {}", info);
-    #[cfg(feature = "nightly")]
-    unsafe { abort() };
-    loop {}
-}
+              # privateリポジトリの場合は以下
+              # secrets.GITHUB_TOKEN: 自動で設定される、job実行ごとのトークン
+              run: |
+                git clone --depth 1 --branch "${GITHUB_REF_NAME}" \
+                "https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git" .
+            - name: ""
+              run: |
+                ls
+            - name: "upload artifact"
+              # [Github: @actions/upload-artifact]にて現行メジャーバージョンを要確認・更新
+              uses: actions/upload-artifact@v7
+              with:
+                name: "artifact name"
+                path: "./examples/target/"
+                retention-days: 7
 ```
