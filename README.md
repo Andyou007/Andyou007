@@ -19,8 +19,8 @@ A web system architect, specializing in requirements definition, bit layout, vm 
 
 [![animagram](https://img.shields.io/badge/animagram-5B2F91?logo=github&logoColor=white)](https://github.com/animagram-jp)
 
-- animagram organization owner
-- OSS maintainer: 5 Repositories in Github, 2 crates in crates.io
+- Own animagram organization.
+- Own OSS: 5 Repositories in Github, 3 crates in crates.io.
 
 ## Stacks
 
@@ -41,6 +41,7 @@ A web system architect, specializing in requirements definition, bit layout, vm 
 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
 ![WebAssembly](https://img.shields.io/badge/WebAssembly-654FF0?style=flat&logo=webassembly&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white)
 ![Axum](https://img.shields.io/badge/Axum-000000?style=flat&logo=rust&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=cloudflare&logoColor=white)
