@@ -55,6 +55,7 @@ tmux # detouch using Ctrl + b -> d & return using `tmux a`
 sudo apt update && sudo apt install git
 git config --global user.name ""
 git config --global user.email ""
+git diff --numstat branch1 branch2 # to confirm branches diff counts
 
 # checkout aborting diffs
 sudo chown 1000:1000 -R . && git clean -fd
