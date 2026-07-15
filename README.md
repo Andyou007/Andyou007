@@ -1,6 +1,5 @@
 # Andyou
 
-A web system architect, specializing in requirements definition, bit layout, vm orchestration, etc.
 - name: Andyou
 - alias: アンジュ
 - prpnouciation: /ændju/
@@ -17,8 +16,8 @@ A web system architect, specializing in requirements definition, bit layout, vm 
 
 [![animagram](https://img.shields.io/badge/animagram-5B2F91?logo=github&logoColor=white)](https://github.com/animagram-jp)
 
-- Own animagram organization.
-- Own OSS: 5 repos in Github, 3 crates in crates.io.
+- Owner of an organization animagram.
+- Owner of OSS: 5 repos in github.com, 3 crates in crates.io.
 
 ## Stacks
 
