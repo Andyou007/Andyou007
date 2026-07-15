@@ -111,10 +111,6 @@ rm syukujitsu.csv
 
 - [Github: workflow syntax](https://docs.github.com/ja/actions/reference/workflows-and-actions/workflow-syntax)
 - [Github: runners' spec](https://github.com/actions/runner-images)
-- [Github: actions/upload-artifact](https://github.com/marketplace/actions/upload-a-build-artifact)
-- [Github: actions/configure-pages](https://github.com/marketplace/actions/configure-github-pages)
-- [Github: actions/upload-pages-artifact](https://github.com/marketplace/actions/upload-github-pages-artifact)
-- [Github: actions/deploy-pages](https://github.com/marketplace/actions/deploy-github-pages-site)
 
 ```yaml
 name: "workflow name"
@@ -141,6 +137,9 @@ jobs:
     deploy: # 任意のjob名
         timeout-minutes: 30 # stepsごとにも設定可能
         runs-on: "ubuntu-latest" # 選ばれるCPUアーキテクチャはdocsで都度要確認
+        environment:
+            name: github-pages # Github Pages利用時のみ
+            url: ${{ steps.deployment.outputs.page_url }}
         # needs, if, stratergy: jobs全体で実行制御可能。
         steps:
             - name: "git clone" # 省略可
@@ -156,9 +155,7 @@ jobs:
               run: |
                 git clone --depth 1 --branch "${GITHUB_REF_NAME}" \
                 "https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git" .
-            - name: ""
-              run: |
-                ls
+
             - name: "upload artifact"
               # [Github: @actions/upload-artifact]にて現行メジャーバージョンを要確認・更新
               uses: actions/upload-artifact@v7
@@ -177,9 +174,6 @@ jobs:
 
             - name: "deploy to GitHub Pages"
               id: "deployment"
-              environment:
-                name: github-pages
-                url: ${{ steps.deployment.outputs.page_url }}
               uses: actions/deploy-pages@v5
 ```
 
