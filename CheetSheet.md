@@ -142,19 +142,9 @@ jobs:
             url: ${{ steps.deployment.outputs.page_url }}
         # needs, if, stratergy: jobs全体で実行制御可能。
         steps:
-            - name: "git clone" # 省略可
-              id: "git_clone" # 省略可。外部stepで出力を取得したい場合に使う
-              # GITHUB_REF_NAME: 自動で設定される、onに応じたブランチ/タグ名
-              # GITHUB_REPOSITORY: こちらも自動で設定される
-              run: |
-                git clone --depth 1 --branch "${GITHUB_REF_NAME}" \
-                "https://github.com/${GITHUB_REPOSITORY}.git" .
-
-              # privateリポジトリの場合は以下
-              # secrets.GITHUB_TOKEN: 自動で設定される、job実行ごとのトークン
-              run: |
-                git clone --depth 1 --branch "${GITHUB_REF_NAME}" \
-                "https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git" .
+            - name: "git checkout" # 省略可
+              id: "git_checkout" # 省略可。外部stepで出力を取得したい場合に使う
+              uses: actions/checkout@v7
 
             - name: "upload artifact"
               # [Github: @actions/upload-artifact]にて現行メジャーバージョンを要確認・更新
