@@ -111,10 +111,10 @@ rm syukujitsu.csv
 
 - [Github: workflow syntax](https://docs.github.com/ja/actions/reference/workflows-and-actions/workflow-syntax)
 - [Github: runners' spec](https://github.com/actions/runner-images)
-- [Github: actions/upload-artifact](https://github.com/marketplace/actions/upload-a-build-artifact) ![release](https://img.shields.io/github/v/release/actions/upload-artifact)
-- [Github: actions/configure-pages](https://github.com/marketplace/actions/configure-github-pages) ![release](https://img.shields.io/github/v/release/actions/configure-pages)
-- [Github: actions/upload-pages-artifact](https://github.com/marketplace/actions/upload-github-pages-artifact) ![release](https://img.shields.io/github/v/release/actions/upload-pages-artifact)
-- [Github: actions/deploy-pages](https://github.com/marketplace/actions/deploy-github-pages-site) ![release](https://img.shields.io/github/v/release/actions/deploy-pages)
+- [Github: actions/upload-artifact](https://github.com/marketplace/actions/upload-a-build-artifact)
+- [Github: actions/configure-pages](https://github.com/marketplace/actions/configure-github-pages)
+- [Github: actions/upload-pages-artifact](https://github.com/marketplace/actions/upload-github-pages-artifact)
+- [Github: actions/deploy-pages](https://github.com/marketplace/actions/deploy-github-pages-site)
 
 ```yaml
 name: "workflow name"
@@ -178,4 +178,20 @@ jobs:
                 name: github-pages
                 url: ${{ steps.deployment.outputs.page_url }}
               uses: actions/deploy-pages@v5
+```
+
+## Github Dependabot
+
+```yaml
+# .github/dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/" # .github/workflows/*.yml
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "cargo"
+    directory: "/" # ./
+    schedule:
+      interval: "weekly"
 ```
