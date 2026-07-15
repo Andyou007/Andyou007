@@ -109,12 +109,12 @@ rm syukujitsu.csv
 
 ## Github Actions
 
-- [github docs: workflow syntax](https://docs.github.com/ja/actions/reference/workflows-and-actions/workflow-syntax)
-- [github repos: runners' spec](https://github.com/actions/runner-images)
-- [Github: actions/upload-artifact](https://github.com/marketplace/actions/upload-a-build-artifact)
-- [Github: actions/configure-pages](https://github.com/marketplace/actions/configure-github-pages)
-- [Github: actions/upload-pages-artifact](https://github.com/marketplace/actions/upload-github-pages-artifact)
-- [Github: actions/deploy-pages](https://github.com/marketplace/actions/deploy-github-pages-site)
+- [Github: workflow syntax](https://docs.github.com/ja/actions/reference/workflows-and-actions/workflow-syntax)
+- [Github: runners' spec](https://github.com/actions/runner-images)
+- [Github: actions/upload-artifact](https://github.com/marketplace/actions/upload-a-build-artifact) ![release](https://img.shields.io/github/v/release/actions/upload-artifact)
+- [Github: actions/configure-pages](https://github.com/marketplace/actions/configure-github-pages) ![release](https://img.shields.io/github/v/release/actions/configure-pages)
+- [Github: actions/upload-pages-artifact](https://github.com/marketplace/actions/upload-github-pages-artifact) ![release](https://img.shields.io/github/v/release/actions/upload-pages-artifact)
+- [Github: actions/deploy-pages](https://github.com/marketplace/actions/deploy-github-pages-site) ![release](https://img.shields.io/github/v/release/actions/deploy-pages)
 
 ```yaml
 name: "workflow name"
@@ -173,6 +173,7 @@ jobs:
               with:
                 path: "./examples"
             - name: Deploy to GitHub Pages
+              id = "deployment"
               environment:
                 name: github-pages
                 url: ${{ steps.deployment.outputs.page_url }}
