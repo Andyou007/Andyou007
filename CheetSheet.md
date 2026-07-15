@@ -166,13 +166,13 @@ jobs:
                 name: "artifact name"
                 path: "./examples/target/"
                 retention-days: 7
-            - name: Setup Pages
+            - name: "setup github pages"
               uses: actions/configure-pages@v6
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v5
               with:
                 path: "./examples"
-            - name: Deploy to GitHub Pages
+            - name: "deploy to gitHub pages"
               id: "deployment"
               environment:
                 name: github-pages
