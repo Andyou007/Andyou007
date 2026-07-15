@@ -173,7 +173,7 @@ jobs:
               with:
                 path: "./examples"
             - name: Deploy to GitHub Pages
-              id = "deployment"
+              id: "deployment"
               environment:
                 name: github-pages
                 url: ${{ steps.deployment.outputs.page_url }}
