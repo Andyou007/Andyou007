@@ -163,16 +163,19 @@ jobs:
               # [Github: @actions/upload-artifact]にて現行メジャーバージョンを要確認・更新
               uses: actions/upload-artifact@v7
               with:
-                name: "artifact name"
+                name: "artifact_name"
                 path: "./examples/target/"
                 retention-days: 7
-            - name: "setup github pages"
+
+            - name: "setup Github Pages"
               uses: actions/configure-pages@v6
-            - name: Upload artifact
+
+            - name: "upload artifact as Github Pages"
               uses: actions/upload-pages-artifact@v5
               with:
                 path: "./examples"
-            - name: "deploy to gitHub pages"
+
+            - name: "deploy to GitHub Pages"
               id: "deployment"
               environment:
                 name: github-pages
