@@ -111,7 +111,10 @@ rm syukujitsu.csv
 
 - [github docs: workflow syntax](https://docs.github.com/ja/actions/reference/workflows-and-actions/workflow-syntax)
 - [github repos: runners' spec](https://github.com/actions/runner-images)
-- [Github: @actions/upload-artifact](https://github.com/marketplace/actions/upload-a-build-artifact)
+- [Github: actions/upload-artifact](https://github.com/marketplace/actions/upload-a-build-artifact)
+- [Github: actions/configure-pages](https://github.com/marketplace/actions/configure-github-pages)
+- [Github: actions/upload-pages-artifact](https://github.com/marketplace/actions/upload-github-pages-artifact)
+- [Github: actions/deploy-pages](https://github.com/marketplace/actions/deploy-github-pages-site)
 
 ```yaml
 name: "workflow name"
@@ -163,4 +166,15 @@ jobs:
                 name: "artifact name"
                 path: "./examples/target/"
                 retention-days: 7
+            - name: Setup Pages
+              uses: actions/configure-pages@v6
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v5
+              with:
+                path: "./examples"
+            - name: Deploy to GitHub Pages
+              environment:
+                name: github-pages
+                url: ${{ steps.deployment.outputs.page_url }}
+              uses: actions/deploy-pages@v5
 ```
