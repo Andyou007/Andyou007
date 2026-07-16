@@ -20,7 +20,7 @@
 
 - Owner of an organization animagram.
 - Owner of OSS: 5 repos in github.com, 3 crates in crates.io.
-- [cheet sheet](./CheetSheet.md)
+- [Cheet Sheet](./CheetSheet.md)
 
 ## Stacks
 
