@@ -16,9 +16,22 @@ winget install gsudo bootandy.dust
 winget upgrade --all
 gsudo winget install Microsoft.PowerShell
 
-# WSL
-gsudo wsl --install --distribution Debian # select a distribution
+# add WSL
+gsudo wsl --install --distribution Debian
 gsudo wsl -d Debian
+```
+
+- Select Linux Distribution:
+
+| Image | Update cycle |
+|-|-|
+| Debian stable slim | 2 years |
+| Ubuntu non-LTS | 6 months |
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt dist-upgrade -y
+sudo do-release-upgrade
 ```
 
 ## Debian
