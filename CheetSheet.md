@@ -26,7 +26,10 @@ gsudo wsl -d Debian
 ```bash
 # --- apt ---
 sudo apt update && sudo apt upgrade -y
-mkdir -p w # make a working root (recommendation)
+# exclude recommend dependencies when apt install
+echo 'APT::Install-Recommends "false";' | sudo tee /etc/apt/apt.conf.d/99no-recommends
+
+mkdir -p w # make a working root
 
 # purge when unuse cloud-init and vim
 sudo apt purge cloud-init
