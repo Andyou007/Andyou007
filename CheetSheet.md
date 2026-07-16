@@ -34,7 +34,7 @@ sudo apt dist-upgrade -y
 sudo do-release-upgrade
 ```
 
-## Debian
+## Apt
 
 ```bash
 # --- apt ---
