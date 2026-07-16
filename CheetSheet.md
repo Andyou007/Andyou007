@@ -59,6 +59,7 @@ cat /etc/apt/sources.list
 sudo rm -f /etc/apt/sources.list.d/{repogitory}.list
 
 # --- ssh ---
+sudo apt install ssh
 ssh-keygen -t ed25519 # type "Enter" to continue
 cat ~/.ssh/id_ed25519.pub # copy and paste to 3rd party inputs
 chmod 600 ~/.ssh/id_ed25519
