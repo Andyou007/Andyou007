@@ -1,5 +1,7 @@
 # Andyou
 
+[TRPG Profile](./TrpgProfile.md)
+
 - name: Andyou
 - alias: アンジュ
 - prpnouciation: /ændju/
