@@ -71,8 +71,8 @@ tmux # detouch using Ctrl + b -> d & return using `tmux a`
 
 # --- git ---
 sudo apt update && sudo apt install git
-git config --global user.name ""
-git config --global user.email ""
+git config --global user.name "Andyou"
+git config --global user.email "andyou@animagram.jp"
 git diff --numstat branch1 branch2 # to confirm branches diff counts
 
 # checkout aborting diffs
@@ -133,7 +133,7 @@ rm syukujitsu.csv
 ```yaml
 name: "workflow name"
 
-on: # 実行条件
+on:
     workflow_dispatch: # manual excution
     release:
         types: [published] # when released
@@ -145,27 +145,26 @@ on: # 実行条件
 
 permissions:
     contents: "read"
-    actions: "write" # github artifactの保存など
+    actions: "write" # when uploading Github Artifact
 
-env: # 環境変数 (run: 内で$付きキー名で扱う定数)
-    ENV_VAR:   ${{vars.ENV_VAR}} # Repository/Organization/Environment単位で設定可能
-    SECRET_KEY: ${{secrets.SECRET_KEY}} # 機密情報用マスクフィールド
+env: # refer as $variable in "run:"
+    ENV_VAR:   ${{vars.ENV_VAR}}
+    SECRET_KEY: ${{secrets.SECRET_KEY}}
 
 jobs:
-    deploy: # 任意のjob名
-        timeout-minutes: 30 # stepsごとにも設定可能
-        runs-on: "ubuntu-latest" # 選ばれるCPUアーキテクチャはdocsで都度要確認
+    deploy: # job name
+        timeout-minutes: 30
+        runs-on: "ubuntu-latest" # check host specs in documents 
         environment:
-            name: github-pages # Github Pages利用時のみ
+            name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
-        # needs, if, stratergy: jobs全体で実行制御可能。
+        # needs, if, stratergy
         steps:
-            - name: "git checkout" # 省略可
-              id: "git_checkout" # 省略可。外部stepで出力を取得したい場合に使う
+            - name: "git checkout"
               uses: actions/checkout@v7
 
             - name: "upload artifact"
-              # [Github: @actions/upload-artifact]にて現行メジャーバージョンを要確認・更新
+              # check major version in documents or automate with dependabot
               uses: actions/upload-artifact@v7
               with:
                 name: "artifact_name"
