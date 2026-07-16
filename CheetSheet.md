@@ -29,6 +29,7 @@ gsudo wsl -d Debian
 | Ubuntu non-LTS | 6 months |
 
 ```bash
+# update distribution
 sudo apt update && sudo apt upgrade -y
 sudo apt dist-upgrade -y
 sudo do-release-upgrade
