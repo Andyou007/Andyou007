@@ -48,7 +48,7 @@ mkdir -p w # make a working root
 sudo apt purge cloud-init
 sudo apt autoremove
 sudo rm -rf /etc/cloud /var/lib/cloud
-which nano && sudo apt purge vim-tiny vim
+sudo apt install nano && sudo apt purge vim-tiny vim
 
 # get informations
 uname -a # linux kernel version
@@ -139,11 +139,11 @@ on: # 実行条件
         types: [published] # when released
     push:
         tags:
-            - "*.*.*" # タグ作成時実行 (リリース時実行と重複するのでどちらか選択)
+            - "*.*.*" # when tags created
         branches:
             - "main"
 
-permissions: # 実行時の付与権限
+permissions:
     contents: "read"
     actions: "write" # github artifactの保存など
 
