@@ -9,16 +9,15 @@
 ```powershell
 # Excute Windows Powershell as Administrator
 
-# Utility
-winget update
-winget upgrade winget
+winget update && winget upgrade winget
 winget install gsudo bootandy.dust
-winget upgrade --all
 gsudo winget install Microsoft.PowerShell
+gsudo winget update && gsudo winget upgrade --all
 
 # add WSL
-gsudo wsl --install --distribution Debian
-gsudo wsl -d Debian
+wsl --list --verbose
+wsl --install --distribution Debian
+wsl -d Debian
 ```
 
 - Select Linux Distribution:
@@ -51,11 +50,12 @@ sudo apt autoremove
 sudo rm -rf /etc/cloud /var/lib/cloud
 which nano && sudo apt purge vim-tiny vim
 
-# get version informations
+# get informations
 uname -a # linux kernel version
 cat /etc/os-release # distribution version
+
 sudo apt list --manual-installed
-sudo apt autoremove
+
 cat /etc/apt/sources.list
 sudo rm -f /etc/apt/sources.list.d/{repogitory}.list
 
@@ -134,9 +134,9 @@ rm syukujitsu.csv
 name: "workflow name"
 
 on: # 実行条件
-    workflow_dispatch: # GUI手動実行
+    workflow_dispatch: # manual excution
     release:
-        types: [published] # リリース時実行
+        types: [published] # when released
     push:
         tags:
             - "*.*.*" # タグ作成時実行 (リリース時実行と重複するのでどちらか選択)
