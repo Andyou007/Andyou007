@@ -1,5 +1,3 @@
-// This file includes untranslated text (ja).
-
 # Cheetsheet
 
 - update_at: 2026-07
