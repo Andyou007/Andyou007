@@ -2,9 +2,7 @@
 
 # アンジュ
 
-[![X](https://img.shields.io/badge/@Andyou__007-000000?style=flat&logo=x&logoColor=white)](https://x.com/Andyou_007)
-
-TRPGプレイヤー「アンジュ」のプロフィール
+TRPGプレイヤープロフィール
 
 ---
 
@@ -25,7 +23,7 @@ TRPGプレイヤー「アンジュ」のプロフィール
 
 ### 準備済みシナリオ
 
-無原罪の罪
+-
 
 ### スタイル
 
