@@ -18,6 +18,15 @@ wsl --install --distribution Debian
 wsl -d Debian
 ```
 
+```
+# code "C:\Users\khigu\.wslconfig"
+
+[wsl2]
+memory=8GB
+swap=2GB
+networkingMode=mirrored
+```
+
 - Select Linux Distribution:
 
 | Image | Update cycle |
