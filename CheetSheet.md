@@ -44,9 +44,9 @@ mkdir -p w # make a working root
 
 # purge when unuse cloud-init and vim
 sudo apt purge cloud-init
-sudo apt autoremove
 sudo rm -rf /etc/cloud /var/lib/cloud
 sudo apt install nano && sudo apt purge vim-tiny vim
+sudo apt autoremove
 
 # get informations
 uname -a # linux kernel version
