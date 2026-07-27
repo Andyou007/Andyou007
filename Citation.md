@@ -3,6 +3,7 @@
 # Citation
 
 ライフワークである引用の集成
+Quotations in this repository follow the [ACM Reference Format](https://www.acm.org/publications/authors/reference-formatting).
 
 ## J.K.Rowling	2007	Harry Potter and the Deathly Hallows	松岡裕子(訳)
 
