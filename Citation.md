@@ -9,7 +9,7 @@ Quotations in this repository follow the [ACM Reference Format](https://www.acm.
 
 > 「死者を哀れむではない、ハリー。生きている者を哀れむのじゃ。とくに愛なくして生きている者たちを。きみが帰ることで、傷つけられる人間や、引き裂かれる家族の数を少なくすることができるかもしれぬ。それがきみにとって、価値ある目標と思えるのなら、我々はひとまず別れを告げることとしよう」
 
-Rowling, J. K. 2007. *Harry Potter and the Deathly Hallows*. 松岡裕子 (Trans.). 第35章.
+Rowling, J. K. 2007. *Harry Potter and the Deathly Hallows*. 松岡佑子 (Trans.). 第35章.
 
 ---
 
@@ -207,7 +207,7 @@ Ende, M. 1979. *はてしない物語 / The Neverending Story*. 上田真而子,
 >
 > 「でもホビット庄とは言え、あなた方の土地ではない、....垣根をきずいてとじこもることはできても、垣根の中にいつまでも外の世界を入れないでおけはしないでしょう。」
 
-Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中朋子 (Trans.). 過去の影.
+Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中明子 (Trans.). 過去の影.
 
 歴史に残る極悪な行為を見れば、人の行いによって生きる資格の有無という境界は有ると感じられる。しかし、その為の公正な判断は当人によってのみ成立する。
 
@@ -217,7 +217,7 @@ Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中朋子 (Tra
 
 > (トム・ボンバディルが彼の正体を問うフロド・バギンズに対して)「あんたはわたしにだれかというが、そういうあんたはだれなのかね？　あんたはただひとりで、あんた自身で、そして名前なき者ではないかね？」
 
-Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中朋子 (Trans.). トム・ボンバディルの家で.
+Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中明子 (Trans.). トム・ボンバディルの家で.
 
 忘れがちだが他者の認知を必要とするのは私達の生存であって存在では無い。名前や身体が明日どう変化しようが当然私は私である。
 
@@ -225,19 +225,19 @@ Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中朋子 (Tra
 
 > 「この指輪を用い、自らの術も駆使して、モルドールの王を倒したとする。するとかれは、次に自らをサウロンの座に据え、ここにまた一人冥王が出現することになるのだ。そしてこれが、指輪を破壊しようとするもう一つの理由にほかならない。....なぜなら、どんなものもその始まりから悪いということはないのだから。サウロンとて例外ではなかった。」
 
-Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中朋子 (Trans.). エルロンドの会議.
+Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中明子 (Trans.). エルロンドの会議.
 
 ---
 
 > 「しかし、お前にはもう表面には表れないものがあるんだよ」
 
-Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中朋子 (Trans.). 指輪、南へ行く.
+Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中明子 (Trans.). 指輪、南へ行く.
 
 ---
 
 > 「哀れなのはわれらすべてだ！　そしてこの末の世に生きる者すべてではないか。なぜなら、見いだして失うはこの世の習いだもの。」
 
-Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中朋子 (Trans.).
+Tolkien, J. R. R. 1954. *The Lord of The Rings*. 瀬田貞二, 田中明子 (Trans.).
 
 憐憫はしばしば不幸な他人を下に見る行為を伴ったり、そう解釈され忌避される事がある。しかし、どんな存在とでも共有できる背景、死ぬ運命を持って生まれた事を共感するにあたって相応しいのは憐憫では無いだろうか。
 
@@ -595,7 +595,7 @@ Morton, K. 2006. *The House at Riverton*. 栗原百代 (Trans.).
 >
 > 「人間を戦争に向かわしめる根源の欲望とはいったい何であろう。民衆はなぜ無力なのであろう。なぜ戦争遂行者の言いなりにならざるを得ず、しかも銃を握った瞬間、平凡な心優しい男たちが残忍な殺人者と化すのであろう。」
 
-宮本輝. 1984. *流転の海*.
+宮本輝. 1984. *流転の海*. 新潮社.
 
 ---
 
@@ -607,7 +607,7 @@ Baum, L. F. 1900. *The Wonderful Wizard of Oz*. 松村達雄 (Trans.).
 
 > 「おお、主よ、われらに強さをーー自分の子供たちを飢えさせる強さを与えたまえ。」
 
-Dahl, R. 1948. *Someone Like You*. 田口俊樹 (Trans.). The Great Automatic Grammatizator.
+Dahl, R. 1953. *Someone Like You*. 田口俊樹 (Trans.). The Great Automatic Grammatizator.
 
 ---
 
