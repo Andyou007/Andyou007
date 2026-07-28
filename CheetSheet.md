@@ -18,9 +18,9 @@ wsl --install --distribution Debian
 wsl -d Debian
 ```
 
-```
-# code "C:\Users\khigu\.wslconfig"
+- "C:\Users\<USER>\.wslconfig"
 
+```
 [wsl2]
 memory=8GB
 swap=2GB
