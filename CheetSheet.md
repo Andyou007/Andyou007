@@ -18,7 +18,7 @@ wsl --install --distribution Debian
 wsl -d Debian
 ```
 
-```
+```ini
 # code C:\Users\<USER>\.wslconfig
 
 [wsl2]
