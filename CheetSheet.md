@@ -25,6 +25,9 @@ wsl -d Debian
 memory=8GB
 swap=2GB
 networkingMode=mirrored
+
+[boot]
+systemd=true
 ```
 
 - Select Linux Distribution:
