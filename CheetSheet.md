@@ -18,7 +18,7 @@ wsl --install --distribution Debian
 wsl -d Debian
 ```
 
-- "C:\Users\<USER>\.wslconfig"
+- `C:\Users\<USER>\.wslconfig`
 
 ```
 [wsl2]
