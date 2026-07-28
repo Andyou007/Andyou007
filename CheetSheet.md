@@ -19,7 +19,7 @@ wsl -d Debian
 ```
 
 ```
-code C:\Users\<USER>\.wslconfig
+# code C:\Users\<USER>\.wslconfig
 
 [wsl2]
 memory=8GB
