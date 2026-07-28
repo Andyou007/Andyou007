@@ -18,9 +18,9 @@ wsl --install --distribution Debian
 wsl -d Debian
 ```
 
-- `C:\Users\<USER>\.wslconfig`
-
 ```
+code C:\Users\<USER>\.wslconfig
+
 [wsl2]
 memory=8GB
 swap=2GB
