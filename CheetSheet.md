@@ -95,8 +95,8 @@ curl -fsSL https://claude.ai/install.sh | bash
 ## Docker
 
 - clean up: `sudo rm -rf /var/lib/docker/ /var/lib/containerd`
-- [install](https://docs.docker.com/engine/install)
-- [rootless](https://docs.docker.com/engine/security/rootless/)
+- [Docker: installation](https://docs.docker.com/engine/install)
+- [Docker: rootless](https://docs.docker.com/engine/security/rootless/)
 - set up: `sudo usermod -aG docker $USER && newgrp docker && docker login -u "" -p ""`
 
 ```bash
