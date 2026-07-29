@@ -110,7 +110,7 @@ sudo rm -rf /var/lib/docker/ # delete all
 note: containerd.io docker-ce docker-ce-cli docker-buildx-plugin for minimum install
 
 ```powershell
-# optimize vhdx
+# optimize vhdx in Powershell
 Optimize-VDisk -Path "Local\Docker\wsl\ext4.vhdx" -Mode Full
 gsudo pwsh -NoProfile -Command "Optimize-VHD -Path 'C:AppData\Local\wsl\{token}\ext4.vhdx' -Mode Full"
 ```
