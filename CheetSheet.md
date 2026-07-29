@@ -115,6 +115,15 @@ Optimize-VDisk -Path "Local\Docker\wsl\ext4.vhdx" -Mode Full
 gsudo pwsh -NoProfile -Command "Optimize-VHD -Path 'C:AppData\Local\wsl\{token}\ext4.vhdx' -Mode Full"
 ```
 
+## Nginx
+
+```nginx
+# /etc/nginx/nginx.conf
+
+user www-data;
+worker_processes 1; # for local developmentment
+```
+
 ## national holidays (JP)
 
 ```bash
