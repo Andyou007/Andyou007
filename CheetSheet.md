@@ -49,25 +49,23 @@ sudo do-release-upgrade
 ```bash
 # --- apt ---
 sudo apt update && sudo apt upgrade -y
+mkdir -p w # make a working root
 # exclude recommend dependencies when apt install
 echo 'APT::Install-Recommends "false";' | sudo tee /etc/apt/apt.conf.d/99no-recommends
 
-mkdir -p w # make a working root
+# get host version
+uname -a # linux kernel version
+cat /etc/os-release # apt distribution version
+cat /etc/apt/sources.list
+sudo apt list --manual-installed
+# remove source repository
+sudo rm -f /etc/apt/sources.list.d/{repogitory}.list 
 
 # purge when unuse cloud-init and vim
 sudo apt purge cloud-init
 sudo rm -rf /etc/cloud /var/lib/cloud
 sudo apt install nano && sudo apt purge vim-tiny vim
 sudo apt autoremove
-
-# get informations
-uname -a # linux kernel version
-cat /etc/os-release # distribution version
-
-sudo apt list --manual-installed
-
-cat /etc/apt/sources.list
-sudo rm -f /etc/apt/sources.list.d/{repogitory}.list
 
 # --- ssh ---
 sudo apt install ssh
@@ -83,27 +81,15 @@ tmux new -A -s main # detouch using Ctrl + b -> d`
 sudo apt update && sudo apt install git
 git config --global user.name "Andyou"
 git config --global user.email "andyou@animagram.jp"
-git diff --numstat branch1 branch2 # to confirm branches diff counts
 
-# checkout aborting diffs
-sudo chown 1000:1000 -R . && git clean -fd
+git diff --numstat branch1 branch2 # to confirm branches diff counts # count diff
+sudo chown 1000:1000 -R . && git clean -fd # checkout aborting diffs
 
-# --- uv (Python library manager) ---
+# --- uv ---
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # --- claude code ---
 curl -fsSL https://claude.ai/install.sh | bash
-
-# --- build-essential ---
-sudo apt install build-essential
-
-# --- Docker ---
-# requires at least 1 argument error when no container running
-docker stop $(docker ps -q) && docker rm $(docker ps -aq)
-
-docker system df             # disk usage
-docker system prune          # delete unused 
-sudo rm -rf /var/lib/docker/ # delete all
 ```
 
 ## Docker
@@ -111,6 +97,15 @@ sudo rm -rf /var/lib/docker/ # delete all
 - clean up: `sudo rm -rf /var/lib/docker/ /var/lib/containerd`
 - [install](https://docs.docker.com/engine/install/debian)
 - set up: `sudo usermod -aG docker $USER && newgrp docker && docker login -u "" -p ""`
+
+```bash
+# requires at least 1 argument error when no container running
+docker stop $(docker ps -q) && docker rm $(docker ps -aq)
+
+docker system df             # disk usage
+docker system prune          # delete unused 
+sudo rm -rf /var/lib/docker/ # delete all
+```
 
 note: containerd.io docker-ce docker-ce-cli docker-buildx-plugin for minimum install
 
