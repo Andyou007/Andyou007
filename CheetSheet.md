@@ -77,7 +77,7 @@ chmod 600 ~/.ssh/id_ed25519
 
 # --- tmux ---
 sudo apt install tmux -y
-tmux # detouch using Ctrl + b -> d & return using `tmux a`
+tmux new -A -s main # detouch using Ctrl + b -> d`
 
 # --- git ---
 sudo apt update && sudo apt install git
