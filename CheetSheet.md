@@ -94,7 +94,6 @@ curl -fsSL https://claude.ai/install.sh | bash
 
 ## Docker
 
-- clean up: `sudo rm -rf /var/lib/docker/ /var/lib/containerd`
 - [Docker: installation](https://docs.docker.com/engine/install)
 - [Docker: rootless](https://docs.docker.com/engine/security/rootless/)
 - set up: `sudo usermod -aG docker $USER && newgrp docker && docker login -u "" -p ""`
@@ -105,7 +104,7 @@ docker ps -aq | xargs -r docker rm
 
 docker system df             # disk usage
 docker system prune          # delete unused 
-sudo rm -rf /var/lib/docker/ # delete all
+sudo rm -rf /var/lib/docker/ /var/lib/containerd # delete all
 ```
 
 note: containerd.io docker-ce docker-ce-cli docker-buildx-plugin for minimum install
