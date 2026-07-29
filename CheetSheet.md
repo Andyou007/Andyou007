@@ -95,12 +95,12 @@ curl -fsSL https://claude.ai/install.sh | bash
 ## Docker
 
 - clean up: `sudo rm -rf /var/lib/docker/ /var/lib/containerd`
-- [install](https://docs.docker.com/engine/install/debian)
+- [install](https://docs.docker.com/engine/install)
 - set up: `sudo usermod -aG docker $USER && newgrp docker && docker login -u "" -p ""`
 
 ```bash
-# requires at least 1 argument error when no container running
-docker stop $(docker ps -q) && docker rm $(docker ps -aq)
+docker ps -aq | xargs -r docker stop
+docker ps -aq | xargs -r docker rm
 
 docker system df             # disk usage
 docker system prune          # delete unused 
