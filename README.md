@@ -11,8 +11,8 @@
 ## Acounts
 
 [![X](https://img.shields.io/badge/@Andyou__007-000000?style=flat&logo=x&logoColor=white)](https://x.com/Andyou_007)
-[![sizu.me (ja)](https://img.shields.io/badge/sizu.me_(ja)-000000?style=flat)](https://sizu.me/animagram)
-[![Zenn (ja)](https://img.shields.io/badge/Zenn_(ja)-3EA8FF?style=flat&logo=zenn&logoColor=white)](https://zenn.dev/andyou007)
+[![essays: sizu.me (ja)](https://img.shields.io/badge/sizu.me_(ja)-000000?style=flat)](https://sizu.me/animagram)
+[![articles: zenn.dev (ja)](https://img.shields.io/badge/Zenn_(ja)-3EA8FF?style=flat&logo=zenn&logoColor=white)](https://zenn.dev/andyou007)
 
 ## Projects
 
@@ -20,7 +20,6 @@
 
 - Owner of an organization animagram.
 - Owner of OSS: 5 repos in github.com, 3 crates in crates.io.
-- [Cheet Sheet](./CheetSheet.md)
 
 ## Stacks
 
