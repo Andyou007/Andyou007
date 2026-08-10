@@ -2,7 +2,7 @@
 
 # Citation
 
-ライフワークである引用の集成  
+A lifelong collection of quotations.  
 Quotations in this repository follow the [ACM Reference Format](https://www.acm.org/publications/authors/reference-formatting).
 
 ---
