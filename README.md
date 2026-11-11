@@ -7,6 +7,7 @@
 - prpnouciation: /ændju/
 - email: andyou @ animagram.jp
 - [Amazon wish list](https://www.amazon.jp/hz/wishlist/ls/3D465LE764AVF?ref_=wl_share)
+- <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#5B2F91', 'U8W22AHRL8');kofiwidget2.draw();</script> 
 
 ## Acounts
 
