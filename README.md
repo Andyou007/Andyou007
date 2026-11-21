@@ -5,7 +5,6 @@
 - name: Andyou
 - alias: アンジュ
 - pronunciation: /ændju/
-- email: andyou @ animagram.jp
 - [Amazon wish list](https://www.amazon.jp/hz/wishlist/ls/3D465LE764AVF?ref_=wl_share)
 
 ## Acounts
