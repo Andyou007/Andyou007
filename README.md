@@ -11,7 +11,7 @@
 
 [![X](https://img.shields.io/badge/@Andyou__007-000000?style=flat&logo=x&logoColor=white)](https://x.com/Andyou_007)
 [![sizu.me (ja)](https://img.shields.io/badge/sizu.me_(ja)-000000?style=flat)](https://sizu.me/animagram)
-[![zenn.dev (ja)](https://img.shields.io/badge/Zenn_(ja)-3EA8FF?style=flat&logo=zenn&logoColor=white)](https://zenn.dev/andyou007)
+[![zenn.dev (ja)](https://img.shields.io/badge/Zenn_(ja)-3EA8FF?style=flat&logo=zenn&logoColor=black)](https://zenn.dev/andyou007)
 
 ## Projects
 
@@ -24,22 +24,21 @@
 
 ### Business and personal
 
-[![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white)](https://nginx.org/)
 [![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)](https://www.rust-lang.org/)
-[![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
-[![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
+[![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=black)](https://developer.mozilla.org/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS-663399?style=flat&logo=css&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
+[![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=black)](https://nginx.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
 
 ### Business
 
 [![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat&logo=terraform&logoColor=white)](https://www.terraform.io/)
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
-[![cert-manager](https://img.shields.io/badge/cert--manager-informational?style=flat&logo=letsencrypt&logoColor=white)](https://cert-manager.io/)
-[![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)](https://www.php.net/)
-[![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white)](https://laravel.com/)
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=black)](https://www.php.net/)
+[![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=black)](https://laravel.com/)
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vuedotjs&logoColor=white)](https://vuejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vuedotjs&logoColor=black)](https://vuejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=black)](https://www.typescriptlang.org/)
 
 ### Personal
 
